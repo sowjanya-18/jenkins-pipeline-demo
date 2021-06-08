@@ -1,9 +1,11 @@
+library("sowji-jenkins-shared-lib")
 pipeline {
     agent any
 
     stages {
         stage('Hello') {
             steps {
+                test.add('2','3')
                 sh 'echo "Hello World" > hello.txt'
             }
         }
