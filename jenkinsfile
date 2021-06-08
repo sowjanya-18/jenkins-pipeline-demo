@@ -5,8 +5,10 @@ pipeline {
     stages {
         stage('Hello') {
             steps {
+                script {
                 test.add('2','3')
                 sh 'echo "Hello World" > hello.txt'
+               }
             }
         }
         stage("build") {
