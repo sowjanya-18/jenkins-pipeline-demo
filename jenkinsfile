@@ -22,5 +22,4 @@ pipeline {
             archiveArtifacts artifacts: '*.txt', fingerprint: true
         }
     }
-    }
 }
