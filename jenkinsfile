@@ -4,22 +4,23 @@ pipeline {
     stages {
         stage('Hello') {
             steps {
-                echo 'Hello World' > hello.txt
+                sh 'echo "Hello World" > hello.txt'
             }
         }
         stage("build") {
             steps {
-                echo "my son name is bhavi" > build.txt
+                sh 'echo "my son name is bhavi" > build.txt'
             }
         }
         stage ("deploy") {
             steps {
-                echo "my husband name is bhaskar" > deploy.txt
+                sh 'echo "my husband name is bhaskar" > deploy.txt'
             }
         }
-        post {
+   }
+   post {
         always {
             archiveArtifacts artifacts: '*.txt', fingerprint: true
         }
-    }
+   }
 }
