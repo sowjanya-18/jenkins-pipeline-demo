@@ -6,7 +6,7 @@ pipeline {
         stage('Hello') {
             steps {
                 script {
-                test.add("2","3")
+                test.add("10","10")
                 test.add("15","12")
                 test.multiply("2","3")
                 test.count("15","8")
